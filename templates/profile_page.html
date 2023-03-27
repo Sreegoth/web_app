@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImagiPicto</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="D:\Project\Web Application\static\styles.css">-->
+  </head>
+  <body class="profile">
+    <div class="header__wrapper">
+        <header>
+        <div class="navbar">
+            <div>
+                 <a class="logo" href='/home'>ImagiPicto</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='/home'>Home</a></li>
+                    <li><a href='/home'>Features</a></li>
+                    <li><a href='/profile'>Profile</a></li>
+                    <li><a href='#footer'>Contact Us</a></li>
+                    <li><button class='loginbtn' onclick="window.location.href='/loginRegister'">Logout</button></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <div class="cols__container">
+            <div class="left__col">
+              <div class="img__container">
+                <img src="static\profile_image.png" alt="User" />
+                <span></span>
+              </div>
+              <h2>{{name}}</h2>
+              <p>{{email}}</p>
+            </div>
+
+            <div class="right__col">
+              <nav>
+                <ul>
+                  <li>Images Searched</li>
+                </ul>
+              </nav>
+    
+              <div class="photos">
+                <img src="static\img_1.avif" alt="Photo" />
+                <img src="static\img_2.avif" alt="Photo" />
+                <img src="static\img_3.avif" alt="Photo" />
+                <img src="static\img_4.avif" alt="Photo" />
+                <img src="static\img_5.avif" alt="Photo" />
+                <img src="static\img_6.avif" alt="Photo" />
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <footer id="footer">
+      <img class="logo1" src="static\logo.png" height="30%" width="30%">
+      <!--<div class="socialicon">
+        <a href="#"><img  src="static\fb_logo.png"></a>&nbsp;&nbsp;
+        <a href="#"><img  src="static\insta_logo.png"></a>&nbsp;&nbsp;
+        <a href="#"><img  src="static\twitter_logo.png"></a>
+      </div>-->
+      <div class="copyright">
+        Copyright 2023 ©. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>
